@@ -10,13 +10,6 @@ const SECRET_KEY = process.env.SECRET_KEY;
 const password = process.env.PASS;
 const accEmail = process.env.EMAIL;
 
-//Route -> (0) REGISTER Account
-route.get("/", (req, res) => {
-  res.json({
-    msg: "welcome to node app"
-  })
-})
-
 //Route -> (1) REGISTER Account
 route.post("/api/register", async (req, res) => {
   try {
