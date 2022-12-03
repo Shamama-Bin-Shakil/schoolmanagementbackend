@@ -1,27 +1,28 @@
 const express = require("express");
 const cors = require("cors");
-const morgan  = require("morgan");
-const path  = require("path");
-const connectDB = require("./server/db/db");
+// const morgan  = require("morgan");
+// const path  = require("path");
+// const connectDB = require("./server/db/db");
 const app = express();
 require("dotenv").config();
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
+const port = 5000;
 
 // Connection DB
-connectDB();
+// connectDB();
 
 // Use Cors
 app.use(cors());
 
 // Use logger create
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 // Use middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Use Public Folder
-app.use(express.static(path.join(__dirname, "./public")));
+// app.use(express.static(path.join(__dirname, "./public")));
 
 // Router Auth
 
